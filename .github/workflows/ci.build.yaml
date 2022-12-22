@@ -1,0 +1,14 @@
+name: image build 
+env:
+      # Container Image Name // update it as per project name.
+      image_name: "maven-image"
+      # Repo Name
+      GHCR_REPO: "ghcr.io/umangcypher-bh/docker-maven-sample"
+      # Path to the Dockerfile. (default {context}/Dockerfile)
+      docker_file_path: "."
+      # "location of lock file in git repository (Trivy will look for vulnerabilities based on lock files such as Gemfile.lock and package-lock.json)"  
+      Packages_lock: "."
+      # Image Tag
+      image_tag: ${{ github.event.inputs.tag }}
+      # GH Username 
+      username: 'umangcypher-BH'
